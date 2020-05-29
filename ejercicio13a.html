@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Práctica con JS</title>
+  </head>
+  <body>
+    <h1>Vamos a practicar con el ámbito de las variables</h1>
+    <script type="application/javascript">
+      var n = 8;
+      function primos(n) {
+        var sum = 0;
+        var numero = 2;
+        var arr = [];
+        while(sum < n) {
+          var bool = true;
+          for (var aux = 2; aux < numero; aux++) {
+            if (numero % aux === 0){
+              bool = false;
+            }
+          }
+          if (bool) {
+            arr.push(numero);
+            sum++;
+          }
+          numero++;
+        }
+        return arr;
+      }
+      console.log(primos(n));
+    </script>
+  </body>
+</html>
